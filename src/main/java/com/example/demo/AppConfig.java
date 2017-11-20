@@ -15,20 +15,4 @@ import static com.google.common.base.Predicates.*;
 @EnableSwagger2  // Springfoxを使用可能にするためのアノテーション
  public class AppConfig {
 
-    @Bean
-    public Docket document() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select().paths(paths()).build().apiInfo(apiInfo());
-    }
-
-
-    private Predicate<String> paths() {
-        return or(containsPattern("/api*"));  //APIのエントリポイントを正規表現で指定
-    }
-
-    private ApiInfo apiInfo() {
-        ApiInfo apiInfo = new ApiInfo("Sample API", "",
-                "terms of service", "", "", "", "");
-        return apiInfo;
-    }
 }
