@@ -15,6 +15,4 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 @SpringBootTest
 public class Demo01ApplicationTests {
 
-	}
-
 }
