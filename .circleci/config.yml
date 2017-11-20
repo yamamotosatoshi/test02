@@ -8,12 +8,7 @@ jobs:
       - checkout
       - run: sudo chmod +x ./gradlew
 	  - run: echo "yamas"
-      - restore_cache:
-          key: gradle-deps-{{ checksum "build.gradle" }}
-      - run:
-          name: Test application
-          command: ./gradlew clean test
-     
+
 
 workflows:
   version: 2
