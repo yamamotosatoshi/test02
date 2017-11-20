@@ -8,7 +8,7 @@ jobs:
       - checkout
        - run:
       name: chmod permissions
-      command: chmod +x ./gradlew
+      command: sudo chmod +x ./gradlew
       - restore_cache:
           key: gradle-deps-{{ checksum "build.gradle" }}
       - run:
