@@ -6,9 +6,8 @@ jobs:
        - image: circleci/node:4.8.2
     steps:
       - checkout
-       - run:
-      name: chmod permissions
-      command: sudo chmod +x ./gradlew
+      - run: sudo chmod +x ./gradlew
+	  - run: echo "yamas"
       - restore_cache:
           key: gradle-deps-{{ checksum "build.gradle" }}
       - run:
