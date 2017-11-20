@@ -12,7 +12,7 @@ import static com.google.common.base.Predicates.*;
 
 
 @Configuration
-@EnableSwagger2  // Springfox‚ğg—p‰Â”\‚É‚·‚é‚½‚ß‚ÌƒAƒmƒe[ƒVƒ‡ƒ“
+@EnableSwagger2  // Springfoxã‚’ä½¿ç”¨å¯èƒ½ã«ã™ã‚‹ãŸã‚ã®ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
  public class AppConfig {
 
     @Bean
@@ -23,7 +23,7 @@ import static com.google.common.base.Predicates.*;
 
 
     private Predicate<String> paths() {
-        return or(containsPattern("/api*"));  //API‚ÌƒGƒ“ƒgƒŠƒ|ƒCƒ“ƒg‚ğ³‹K•\Œ»‚Åw’è
+        return or(containsPattern("/api*"));  //APIã®ã‚¨ãƒ³ãƒˆãƒªãƒã‚¤ãƒ³ãƒˆã‚’æ­£è¦è¡¨ç¾ã§æŒ‡å®š
     }
 
     private ApiInfo apiInfo() {
