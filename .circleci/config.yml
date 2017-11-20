@@ -41,10 +41,17 @@ jobs:
       # run tests!
       - run: gradle test
 
+  postcmd:
+    steps:
+     - run: echo "endding"
+     
+
 workflows:
   version: 2
   yamaswf:
     jobs:
       - build
+      - postcmd
+      
 
 
