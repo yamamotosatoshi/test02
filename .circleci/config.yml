@@ -1,16 +1,10 @@
 version: 2
 jobs:
-
-  precmd:
-  	  - run: echo "yamas"
-
   build:
     working_directory: ~/mern-starter
     docker:
        - image: circleci/node:4.8.2
     steps:
-      - checkout
-      - run: sudo chmod +x ./gradlew
 	  - run: echo "yamas"
 
 
@@ -18,5 +12,4 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - precmd
       - build
