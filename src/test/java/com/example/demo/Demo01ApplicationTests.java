@@ -14,14 +14,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Demo01ApplicationTests {
-	TestRestTemplate restTemplate = new TestRestTemplate();
-	@LocalServerPort
-	int port;
-	
-	@Test
-	public void contextLoads() {
-	//	assertThat(restTemplate.getForObject("http://localhost:" + port,String.class), is("hoge"));
-		
+
 	}
 
 }
