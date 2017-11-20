@@ -5,8 +5,15 @@ jobs:
     docker:
        - image: circleci/node:4.8.2
     steps:
-	  - run: echo "yamas"
-
+      - checkout
+       - run:
+      name: chmod permissions
+      command: sudo chmod +x ./gradlew
+      - restore_cache:
+          key: gradle-deps-{{ checksum "build.gradle" }}
+      - run:
+          name: Test application
+          command: ./gradlew build
 
 workflows:
   version: 2
